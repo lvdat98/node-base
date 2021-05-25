@@ -1,9 +1,8 @@
 import Boom from '@hapi/boom';
 import Service from '../../core/Service';
-import User from '../../../database/model/User';
+import User from '../../../database/models/User';
 import JWT from '../../../services/Jwt';
 import Bcrypt from '../../../services/Bcrypt';
-import ROLE from '../../../constants/role';
 
 export default class AuthService extends Service {
   async register(payload) {
