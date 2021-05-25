@@ -12,7 +12,7 @@ const db = async () => {
       useCreateIndex: true,
       useFindAndModify: false,
     });
-    logger.info('Connection with database succeeded.');
+    logger.info('> Connection with database succeeded.');
   } catch (err) {
     logger.error(err);
   }

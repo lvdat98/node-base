@@ -8,7 +8,7 @@ export default class Service {
   async getOne(id) {
     const model = await this.model.findById(id);
     if (!model) {
-      throw Boom.notFound(`${model.role}_NOT_FOUND`);
+      throw Boom.notFound(`NOT_FOUND`);
     }
     return model;
   }

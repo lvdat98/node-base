@@ -46,6 +46,7 @@ export default class SwaggerPlugin {
     this.setting();
     try {
       server.register(this.plugins);
+      logger.info('> Swagger Plugin OK');
     } catch (error) {
       logger.error('Error registering swagger plugin : ', error);
     }

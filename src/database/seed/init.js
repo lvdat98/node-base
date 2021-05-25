@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import User from '../model/User';
+import User from '../models/User';
 import ROLE from '../../constants/role';
 import Configs from '../../configs/index';
 import logger from '../../utils/Logging';
@@ -16,7 +16,7 @@ const seed = async () => {
     });
     await User.create([
       {
-        fullname: 'lê văn superadmin',
+        fullname: 'lê văn admin',
         email: 'admin@gmail.com',
         password: '123456',
         role: ROLE.ADMIN,

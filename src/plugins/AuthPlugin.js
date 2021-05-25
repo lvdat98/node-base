@@ -28,6 +28,7 @@ export default class AuthPlugin {
         config: serverConfigs,
         validate: validateUser,
       });
+      logger.info('> Authorization Plugin OK');
     } catch (error) {
       logger.error('Error registering hapi-auth-jwt2 plugin : ', error);
     }

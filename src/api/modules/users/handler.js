@@ -27,7 +27,7 @@ class UserHandler {
     tags: ['api', 'v1'],
     description: 'Get one user',
     notes: 'Return one user',
-    handler: this.controller.getMany,
+    handler: this.controller.getOne,
     auth: {
       strategy: 'jwt',
       scope: ROLE.ADMIN,

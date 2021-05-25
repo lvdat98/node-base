@@ -41,6 +41,7 @@ export default class HapiProvider {
       await new AuthPlugin().register(server);
       await new SwaggerPlugin().register(server);
       await this.setting(server);
+      logger.info('> Hapi OK');
       return server;
     } catch (error) {
       logger.error('Hapi provider error: ', error);
