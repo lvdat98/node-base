@@ -14,4 +14,11 @@ export default class CoreMiddleware {
     };
     return response;
   }
+  onGetMany = async (request) => {
+    if (request.query.filter) {
+      const filter = JSON.parse(JSON.parse(request.query.filter));
+      request.query.filter = filter;
+    }
+    return request;
+  };
 }
