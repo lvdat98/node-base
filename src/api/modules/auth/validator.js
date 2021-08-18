@@ -12,12 +12,8 @@ export default class AuthValidator extends Validator {
       .required(),
     password: Joi.string()
       .trim()
-      .regex(
-        /^([a-zA-Z0-9._@#$%&]{6,32})(?!.*[\s]{1})+[^~<>'\"[\]|{}/;:*?.,!]*$/
-      )
-      .label(
-        'Password contains between 6 and 32 characters and without special characters'
-      )
+      .regex(/^([a-zA-Z0-9._@#$%&]{6,32})(?!.*[\s]{1})+[^~<>'\"[\]|{}/;:*?.,!]*$/)
+      .label('Password contains between 6 and 32 characters and without special characters')
       .required(),
   });
 }

@@ -3,8 +3,7 @@ import Configs from '../configs/index';
 
 class Jwt {
   constructor() {
-    this.secret =
-      process.env.JWT_SECRET || Configs.getServerConfigs().jwtSecret;
+    this.secret = process.env.JWT_SECRET || Configs.getServerConfigs().jwtSecret;
     this.expiresIn = process.env.JWT_EXPIRATION || '7d';
   }
 

@@ -5,8 +5,7 @@ export function generateRandStr(length, type = 'mix') {
   } else if (type === 'numeric') {
     characters = '0123456789';
   } else if (type === 'mixIgnoreCase') {
-    characters =
-      'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789';
+    characters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789';
   }
   let result = '';
   const charactersLength = characters.length;
@@ -27,10 +26,7 @@ export function naturalOrderBy(a, b) {
   });
 }
 
-export function Exception(
-  boom,
-  { message = null, description = 'No description' }
-) {
+export function Exception(boom, { message = null, description = 'No description' }) {
   if (message) {
     boom.output.payload.message = message;
   }

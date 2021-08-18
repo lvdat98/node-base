@@ -2,7 +2,7 @@ import Boom from '@hapi/boom';
 
 export default class Service {
   getMany(query) {
-    return this.model.QueryBuilder(query);
+    return this.model.queryBuilder(query);
   }
 
   async getOne(id) {

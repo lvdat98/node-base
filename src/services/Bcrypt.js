@@ -5,8 +5,7 @@ const bcryptConfigs = Configs.getBcryptConfigs();
 
 class BcryptUtils {
   constructor() {
-    this.saltRounds =
-      parseInt(process.env.SALT_ROUNDS, 10) || bcryptConfigs.saltRounds;
+    this.saltRounds = parseInt(process.env.SALT_ROUNDS, 10) || bcryptConfigs.saltRounds;
   }
 
   hash(password) {

@@ -16,7 +16,7 @@ export default class Validator {
     limit: Joi.number().integer().min(1).max(100).default(10).allow(-1),
     offset: Joi.number().integer().default(0),
     orderBy: Joi.string().default('-id'),
-    filter: Joi.object(),
+    filter: Joi.string(),
     fields: Joi.array(),
   });
 

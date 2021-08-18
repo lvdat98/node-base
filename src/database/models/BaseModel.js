@@ -4,17 +4,18 @@ import mongoosePaginate from 'mongoose-paginate-v2';
 const { Model } = mongoose;
 mongoose.plugin(mongoosePaginate);
 export default class BaseModel extends Model {
-  static QueryBuilder(query, populate = []) {
-    const { limit, offset, orderBy, fields } = query;
-    return this.paginate(
-      {},
-      {
-        limit,
-        offset,
-        sort: orderBy,
-        select: fields,
-        populate,
-      }
-    );
+  static queryBuilder(query, populate = []) {
+    const { limit, page, orderBy, filter } = query;
+    let { fields } = query;
+    if (!fields) {
+      fields = this.defaultFields;
+    }
+    return this.paginate(filter, {
+      limit,
+      page,
+      sort: orderBy,
+      select: fields,
+      populate,
+    });
   }
 }
